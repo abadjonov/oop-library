@@ -20,9 +20,11 @@ class Library:
                 if option == "0":
                     self.auth_handler.logout()
                 elif option == "1":
-                    pass
+                    self.book_handler.search_book()
                 elif option == "2":
                     self.book_handler.show_all_book()
+                elif option == "3":
+                    self.book_handler.borrow_book(self.auth_handler.current_user)
                 else:
                     print("Bunday menu yoq")
             else:
