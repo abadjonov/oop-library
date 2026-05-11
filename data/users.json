@@ -1,0 +1,14 @@
+[
+    {
+        "id": "597a58b6-4d32-11f1-b25e-1e178c571429",
+        "username": "ali",
+        "password_hash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+        "full_name": "Ali Vlaiyev"
+    },
+    {
+        "id": "63771c18-4d33-11f1-9ab8-1e178c571429",
+        "username": "vali",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "full_name": "Vlai"
+    }
+]

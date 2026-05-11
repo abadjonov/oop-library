@@ -13,6 +13,12 @@ class Library:
         while True:
             if self.auth_handler.current_user:
                 self.menu.print_user_menu()
+
+                option = input("> ")
+                if option == "0":
+                    self.auth_handler.logout()
+                else:
+                    print("Bunday menu yoq")
             else:
                 self.menu.print_main_menu()
 
