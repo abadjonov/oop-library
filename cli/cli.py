@@ -1,11 +1,13 @@
 from cli.menu import Menu
 from cli.auth_handlers import AuthHandler
+from cli.book_handlers import BookHandler
 
 
 class Library:
     def __init__(self):
         self.menu = Menu()
         self.auth_handler = AuthHandler()
+        self.book_handler = BookHandler()
 
     def run(self):
         print("----Library`ga xush kelibsiz----")
@@ -17,6 +19,10 @@ class Library:
                 option = input("> ")
                 if option == "0":
                     self.auth_handler.logout()
+                elif option == "1":
+                    pass
+                elif option == "2":
+                    self.book_handler.show_all_book()
                 else:
                     print("Bunday menu yoq")
             else:
