@@ -18,4 +18,20 @@ class BookHandler:
     def borrow_book(self, user):
         book_id = input('Book id: ')
         BorrowRepository.create_borrow(user, book_id)
-        
+        print(f'Book {book_id} borrowed successfully.')
+    
+    def return_book(self, user):
+        borrows = BorrowRepository.get_user_borrows(user.id)
+        if not borrows:
+            print('Sizda hozircha hech qanday kitob yo‘q.')
+            return
+
+        print('Siz qarzdor bo‘lgan kitoblar:')
+        for borrow in borrows:
+            print(borrow['book_id'])
+
+        book_id = input('Return qilish uchun kitob id sini kiriting: ')
+        if BorrowRepository.delete_borrow(user.id, book_id):
+            print(f'Book {book_id} return qilindi!')
+        else:
+            print('Bunday id da qarzdorlik topilmadi.')

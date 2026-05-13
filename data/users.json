@@ -10,5 +10,11 @@
         "username": "vali",
         "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
         "full_name": "Vlai"
+    },
+    {
+        "id": "0cb79156-4e8c-11f1-9c25-90e8685dd512",
+        "username": "sami",
+        "password_hash": "098caaad40062ab896c81baf5993f51ae6445978a2972f6a1520ab4456091ea5",
+        "full_name": "Sami Joniyev"
     }
 ]

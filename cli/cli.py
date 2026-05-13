@@ -25,6 +25,8 @@ class Library:
                     self.book_handler.show_all_book()
                 elif option == "3":
                     self.book_handler.borrow_book(self.auth_handler.current_user)
+                elif option == '4':
+                    self.book_handler.return_book(self.auth_handler.current_user)
                 else:
                     print("Bunday menu yoq")
             else:

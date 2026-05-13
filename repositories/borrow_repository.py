@@ -22,4 +22,18 @@ class BorrowRepository:
             'book_id': book_id
         })
         BorrowRepository.save_file(borrows)
+
+    @staticmethod
+    def get_user_borrows(user_id):
+        borrows = BorrowRepository.read_file()
+        return [borrow for borrow in borrows if borrow['user_id'] == user_id]
+
+    @staticmethod
+    def delete_borrow(user_id, book_id):
+        borrows = BorrowRepository.read_file()
+        updated = [borrow for borrow in borrows if not (borrow['user_id'] == user_id and borrow['book_id'] == book_id)]
+        if len(updated) == len(borrows):
+            return False
+        BorrowRepository.save_file(updated)
+        return True
         
